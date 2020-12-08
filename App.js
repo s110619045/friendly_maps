@@ -1,21 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
+import { preventAutoHide } from 'expo/build/launch/SplashScreen';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, View, TextInput, Button, ScrollView, TouchableOpacity} from 'react-native';
 
-export default function App() {
+import HeaderMap from "./src/components/HeaderMap";
+import Map from "./src/components/Map";
+import Navigator from "./src/components/Navigator";
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.home}>
+      <HeaderMap />
+      <Map />
+      <Navigator />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  home:{
+    flex:  1,
+    flexDirection: 'column',
   },
-});
+})
+
+module.exports = App;
