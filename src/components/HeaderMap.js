@@ -11,7 +11,6 @@ const HeaderMap = () =>{
 
     return(
       <View style={styles.header}>
-        <View style={styles.top}></View>
         <View style={styles.boxSearchUser}>
           <TextInput
             style={styles.searchbar}
@@ -25,7 +24,7 @@ const HeaderMap = () =>{
             }}
           />
         </View>
-        <ScrollView style={styles.element} horizontal={true}>
+        <ScrollView style={styles.element} horizontal={true} showsHorizontalScrollIndicator={false}>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
@@ -104,9 +103,9 @@ const HeaderMap = () =>{
 };
 
 const styles = StyleSheet.create({
-  top:{
-    height: 40,
-  },
+  // top:{
+  //   height: 40,
+  // },
 
   home:{
     flex:  1,

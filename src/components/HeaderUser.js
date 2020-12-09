@@ -1,14 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Image, Text, TouchableOpacity, TextInput, View } from 'react-native';
-import User from "./src/json/user.json";
+import { StyleSheet, Image, Text, TouchableOpacity, TextInput, View, ScrollView } from 'react-native';
+import User from "../json/user.json";
 
-function App() {
+const HeaderUser = () => {
   return (
-    <View style={styles.header}>
-      <View style={styles.top}>
-      </View>
-
+    <ScrollView  style={styles.header} scrollEnabled={false} //定住不能滑動
+    >
       <View style={styles.user}>
         <View style={styles.userInformation}>
           <Image
@@ -68,17 +66,14 @@ function App() {
           <Text style={styles.btn_setting_text}>設定</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   header: {
-
-  },
-
-  top:{
-    height: 40,
+    // backgroundColor: 'pink',
+    // scrollEnabled: 'fales',
   },
 
   user:{
@@ -131,4 +126,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default App;
+export default HeaderUser;

@@ -1,13 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { preventAutoHide } from 'expo/build/launch/SplashScreen';
-import Expo from 'expo';
 import React from 'react';
 import { StyleSheet, Text, Image, View, TextInput, Button, ScrollView, TouchableOpacity} from 'react-native';
 import elementData from "../json/element.json";
 
 const Map = () =>{
     return(
-        <ScrollView style={styles.map}>
+        <ScrollView style={styles.map} >
             <Text>地圖放這</Text>
             <View style={styles.mapBtn}>
                 <TouchableOpacity 
@@ -18,6 +17,7 @@ const Map = () =>{
                 </TouchableOpacity>
 
                 <TouchableOpacity 
+                
                 style={styles.btn_navigation}
                 onPress={() => Alert.alert('Simple Button pressed')}
                 >
