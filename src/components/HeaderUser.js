@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Image, Text, TouchableOpacity, TextInput, View, ScrollView } from 'react-native';
+import Ionicon from 'react-native-vector-icons/Ionicons';
 import User from "../json/user.json";
+import theme from '../color';
 
 const HeaderUser = () => {
   return (
@@ -24,7 +26,7 @@ const HeaderUser = () => {
         style={styles.addUser}
         onPress={() => navigation.navigate('MapScreen', name)}
         >
-          <Image style={styles.addUserIcon}></Image>
+          <Ionicon name={'md-person-add'} color={theme.dark_blue} size={30} style={{marginHorizontal:8,marginVertical:2}}/>
         </TouchableOpacity>
       </View>
 
@@ -72,12 +74,12 @@ const HeaderUser = () => {
 
 const styles = StyleSheet.create({
   header: {
-    // backgroundColor: 'pink',
-    // scrollEnabled: 'fales',
+    backgroundColor: theme.white,
   },
 
   user:{
     borderBottomWidth: 0.5,
+    borderColor: theme.gary,
     paddingHorizontal: 20,
   },
 
@@ -85,6 +87,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     flexDirection: 'row',
     borderBottomWidth: 0.5,
+    borderColor: theme.dark_gary,
   },
 
   userImg:{
@@ -102,12 +105,6 @@ const styles = StyleSheet.create({
 
   addUser:{
     paddingVertical: 10,
-  },
-
-  addUserIcon:{
-    height: 40,
-    width: 40,
-    backgroundColor: 'yellow',
   },
 
   btn_setting:{

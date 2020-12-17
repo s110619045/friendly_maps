@@ -5,6 +5,7 @@ import React from 'react';
 import { StyleSheet, Text, Image, View, TextInput, Button, ScrollView, TouchableOpacity} from 'react-native';
 import elementData from "../json/element.json";
 import User from "../json/user.json";
+import theme from '../color';
 
 const HeaderMap = () =>{
     const [value, onChangeText] = React.useState('Useless Placeholder');
@@ -29,73 +30,73 @@ const HeaderMap = () =>{
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[0].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[0].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[1].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[1].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[2].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[2].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[3].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[3].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[4].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[4].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[5].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[5].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[6].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[6].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[7].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[7].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[8].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[8].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[9].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[9].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[10].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[10].name}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.btn_element}
             onPress={() => Alert.alert('Simple Button pressed')}
           >
-            <Text>{elementData.elementData[11].name}</Text>
+            <Text style={styles.btn_element_text}>{elementData.elementData[11].name}</Text>
           </TouchableOpacity>
         </ScrollView>
       </View>
@@ -103,9 +104,6 @@ const HeaderMap = () =>{
 };
 
 const styles = StyleSheet.create({
-  // top:{
-  //   height: 40,
-  // },
 
   home:{
     flex:  1,
@@ -113,7 +111,7 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    backgroundColor: '#F7F7F5',
+    backgroundColor: theme.white,
   },
 
   boxSearchUser:{
@@ -134,9 +132,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     paddingHorizontal: 12,
     height: 40, 
-    borderColor: 'gray', 
+    borderColor: theme.gary, 
     borderWidth: 1,
     borderRadius: 30,
+    backgroundColor: theme.white,
   },
 
   element: {
@@ -145,15 +144,18 @@ const styles = StyleSheet.create({
   },
 
   btn_element: {
-    backgroundColor: "#DDDDDD",
+    backgroundColor: theme.dark_blue,
     alignSelf: 'flex-start',
     justifyContent: 'center',
     paddingHorizontal: 20,
     height: 30,
     borderRadius: 10,
-    backgroundColor: 'gray',
     marginVertical: 5,
     marginRight:10,
+  },
+
+  btn_element_text : {
+    color: theme.white,
   }
 });
 
