@@ -17,6 +17,7 @@ const HeaderMap = () =>{
             style={styles.searchbar}
             onChangeText={text => onChangeText(text)}
             value={value}
+            clearTextOnFocus = {true}
           />
           <Image
             style={styles.userImg}
@@ -144,7 +145,7 @@ const styles = StyleSheet.create({
   },
 
   btn_element: {
-    backgroundColor: theme.dark_blue,
+    backgroundColor: theme.light_blue,
     alignSelf: 'flex-start',
     justifyContent: 'center',
     paddingHorizontal: 20,

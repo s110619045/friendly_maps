@@ -5,6 +5,7 @@ import { StyleSheet, Text, Image, View, TextInput, Button, ScrollView, Touchable
 
 import Top from "../components/Top";
 import HeaderPost from "../components/HeaderPost";
+import InputPost from "../components/InputPost";
 import Post from "../components/Post";
 import Navigator from "../components/Navigator";
 
@@ -13,7 +14,10 @@ const PostScreen = ({ navigation }) => {
     <View style={styles.home}>
       <Top />
       <HeaderPost />
-      <Post />
+      <ScrollView>
+        <InputPost />
+        <Post />
+      </ScrollView>
       <Navigator
         navigation={navigation}
       />

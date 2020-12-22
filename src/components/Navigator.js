@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { preventAutoHide } from 'expo/build/launch/SplashScreen';
 import React from 'react';
 import { StyleSheet, Text, Image, View, TextInput, Button, ScrollView, TouchableOpacity} from 'react-native';
+import { color } from 'react-native-reanimated';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import theme from '../color';
 // import LogoSVG from '../img/logoSVG';
@@ -15,7 +16,8 @@ const Navigator = ({ navigation }) =>{
             >
                 {/* <LogoSVG/> */}
                 {/* <Image style={styles.navbarimg}></Image> */}
-                <Ionicon name={'ios-pin'} color={theme.gary} size={35}/>
+                <Ionicon name={'ios-pin'} style={ navigation.name === 'MapScreen' ? styles.btncolor : styles.btncolorb}  size={35}/>
+
                 <Text>地圖</Text>
             </TouchableOpacity>
 
@@ -39,6 +41,12 @@ const Navigator = ({ navigation }) =>{
 };
 
 const styles = StyleSheet.create({
+    btncolor:{
+        color: theme.gary,
+    },
+    btncolorb:{
+        color: theme.dark_blue,
+    },
     navbar:{
         flexDirection: 'row',
         backgroundColor: theme.white,

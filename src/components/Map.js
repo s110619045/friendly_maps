@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: theme.white,
-
     },
 
     btn_text:{
