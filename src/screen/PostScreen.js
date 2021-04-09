@@ -18,9 +18,7 @@ const PostScreen = ({ navigation }) => {
         <InputPost />
         <Post />
       </ScrollView>
-      <Navigator
-        navigation={navigation}
-      />
+
     </View>
   );
 };

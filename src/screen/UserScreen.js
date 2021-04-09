@@ -5,18 +5,17 @@ import { StyleSheet, Text, Image, View, TextInput, Button, ScrollView, Touchable
 
 import Top from "../components/Top";
 import HeaderUser from "../components/HeaderUser"
+import HeaderLogin from "../components/HeaderLogin"
 import Navigator from "../components/Navigator";
 
 const UserScreen = ({ navigation }) => {
   return (
     <View style={styles.home}>
       <Top />
-      <HeaderUser 
+      {/* <HeaderUser 
         style={styles.headeruser}
-      />
-      <Navigator style={styles.navigation}
-        navigation={navigation}
-      />
+      /> */}
+      <HeaderLogin/>
     </View>
   );
 };

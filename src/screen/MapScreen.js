@@ -14,9 +14,7 @@ const MapScreen = ({ navigation }) => {
         <Top />
         <HeaderMap />
         <Map />
-        <Navigator 
-            navigation={navigation}
-        />
+
     </View>
   );
 };

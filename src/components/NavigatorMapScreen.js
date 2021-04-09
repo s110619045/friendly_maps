@@ -65,8 +65,6 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 3,
         shadowColor: theme.gary,
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
       },
     
       navbarimg:{

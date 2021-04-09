@@ -37,9 +37,27 @@ const Post = () => {
             <Text style={styles.btn_text_white}>+</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.EventInputBtn}>
-          <Text style={styles.btn_text_white}>類型</Text>
-        </TouchableOpacity>
+
+        <View style={styles.selectClass} horizontal={true} showsHorizontalScrollIndicator={false}>
+          <TouchableOpacity 
+              style={styles.EventInputBtn_lightblue}
+              onPress={() => Alert.alert('Simple Button pressed')}
+            >
+            <Text style={styles.btn_text_white}>路況</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+              style={styles.EventInputBtn_lightblue}
+              onPress={() => Alert.alert('Simple Button pressed')}
+            >
+            <Text style={styles.btn_text_white}>交通事故</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+              style={styles.EventInputBtn_lightblue}
+              onPress={() => Alert.alert('Simple Button pressed')}
+            >
+            <Text style={styles.btn_text_white}>環境</Text>
+          </TouchableOpacity>
+        </View>
         <TextInput
             clearTextOnFocus = {true}
             multiline={true}  //置頂的方法！
@@ -60,7 +78,7 @@ const Post = () => {
             <TouchableOpacity style={styles.EventInputBtn1}>
               <Text style={styles.btn_text_blue}>取消</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.EventInputBtn}>
+            <TouchableOpacity style={styles.EventInputBtn_darkblue}>
               <Text style={styles.btn_text_white}>上傳</Text>
             </TouchableOpacity>
           </View>
@@ -120,6 +138,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: theme.dark_blue,
   },
+  selectClass:{
+    flexDirection: "row",
+  },
   EventInputBtn1:{
     alignSelf: 'flex-start',
     justifyContent: 'center',
@@ -132,13 +153,23 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     marginRight:10,
   },
-  EventInputBtn:{
+  EventInputBtn_darkblue:{
     alignSelf: 'flex-start',
     justifyContent: 'center',
     paddingHorizontal: 20,
     height: 30,
     borderRadius: 8,
     backgroundColor: theme.dark_blue,
+    marginVertical: 10,
+    marginRight:10,
+  },
+  EventInputBtn_lightblue:{
+    alignSelf: 'flex-start',
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+    height: 30,
+    borderRadius: 8,
+    backgroundColor: theme.light_blue,
     marginVertical: 10,
     marginRight:10,
   },
